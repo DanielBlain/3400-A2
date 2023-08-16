@@ -1,13 +1,10 @@
 import React from 'react'
-//import Quote from './Quote';
-//        <Quote />
-
+import QuoteBox from './QuoteBox';
 
 const Main = () => {
   return (
     <main className="App-main">
-      <div>
-      </div>
+      <QuoteBox />
     </main>
   )
 }

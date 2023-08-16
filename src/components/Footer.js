@@ -3,7 +3,9 @@ import React from 'react'
 const Footer = ({ copyrightYear, author }) => {
   return (
     <footer className="App-footer">
-      <h2>Copyright © {author} {copyrightYear}</h2>
+      <p>
+        <h2>Copyright © {author} {copyrightYear}</h2>
+      </p>
     </footer>
   )
 }
