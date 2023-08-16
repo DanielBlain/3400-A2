@@ -1,16 +1,22 @@
 import {useState} from 'react';
+
 import Header from './Header';
+import Footer from './Footer';
+import Main from './Main';
 import './App.css';
 
-let potatoSalad = "<h2>Tesdfasting<h2>";
+let appInfo = {
+    title: "Quote of the Day",
+    author: "Dan J. Blain",
+    copyrightYear: new Date().getFullYear(),
+};
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main className="App-main">
-        {potatoSalad}
-      </main>
+      <Header appTitle="DJB Quote App"/>
+      <Main />
+      <Footer copyrightYear={appInfo.copyrightYear} author={appInfo.author}/>
     </div>
   );
 }
