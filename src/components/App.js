@@ -6,7 +6,7 @@ import './App.css';
 
 let appInfo = {
     title: "Quote of the Day",
-    author: "Dan J. Blain" + "Cow",
+    author: "Dan J. Blain",
     copyrightYear: new Date().getFullYear(),
 };
 

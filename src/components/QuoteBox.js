@@ -2,30 +2,40 @@ import React from 'react'
 import {useState} from 'react';
 import quotes from './quotes.js'
 
-const QuoteBox = ({quoteStr}) => {
+const QuoteBox = () => {
   function selectQuoteIndex() {
     return Math.floor(Math.random()*quotes.length);
   };
 
-  const [count, setCount] = useState(selectQuoteIndex());
+  const [isClickedYet, setIsClickedYet] = useState(false);
+  const [quoteIndex, setQuoteIndex] = useState(selectQuoteIndex());
 
   function getNewQuote() {
-    let oldQuoteIndex = count;
+    setIsClickedYet(true);
+    let oldQuoteIndex = quoteIndex;
     let newQuoteIndex;
     do {
         newQuoteIndex = selectQuoteIndex();
     } while (newQuoteIndex === oldQuoteIndex);
-    setCount(newQuoteIndex);
+    setQuoteIndex(newQuoteIndex);
   }
 
   return (
     <>
-      <p>Click the button to get a quote</p>
-      <button onClick={getNewQuote}>Get Quote #{count}</button>
-      <blockquote>
-        <p>quote goes here: {quotes[count].quote}</p>
-        <footer>author goes here: {quotes[count].author}</footer>
-      </blockquote>
+      {!isClickedYet ? 
+        <p>Click the button to get a quote</p>
+        :
+        <blockquote>
+          <p>{quotes[quoteIndex].quote}</p>
+          <footer>{quotes[quoteIndex].author}</footer>
+        </blockquote>  
+      }
+      <button onClick={getNewQuote}>
+        {!isClickedYet ?
+          "Get Quote"
+          : "Get Another Quote"
+        }
+      </button>
     </>
   )
 }
