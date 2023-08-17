@@ -70,7 +70,23 @@ const quotes = [
     {
         quote: 'No act of kindness, no matter how small, is ever wasted.',
         author: 'Aesop'
-    }
+    },
+    {
+        quote: 'If there\'s nothing wrong with me, maybe there\'s something wrong with the universe.',
+        author: 'Dr. Beverly Crusher'
+    },
+    {
+        quote: 'Nay, the machine of God\'s making is so imperfect, according to these gentlemen ; that he is so obliged to clean it now and then by an extraordinary concourse, and even to mend it, as a clockmaker mends his work ; who must consequently be so much the more inskilful a workman, as he is oftener obliged to mend his work and to set it right.',
+        author: 'G W Leibniz by way of Samuel Clarke'
+    },
+    {
+        quote: 'Novelty for its own sake is not a desideratum in the sciences as it is in so many other creative fields. As a result, though new paradigms seldom or never possess all the capabilities of their predecessors, they usually preserve a great deal of the most concrete parts of past achievements and they always permit additional concrete problem-solutions besides.',
+        author: 'Thomas S Kuhn'
+    },
+    {
+        quote: '“You know,” said Arthur, “it\'s at times like this, when I\'m trapped in a Vogon airlock with a man from Betelgeuse, and about to die of asphyxiation in deep space that I really wish I\'d listened to what my mother told me when I was young.”',
+        author: 'Douglas Adams'
+    },
 ]
 
 export default quotes;
